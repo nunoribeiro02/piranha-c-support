@@ -49,6 +49,7 @@ ctrlc = "3.4"
 # TODO: Update if we upgrade tree-sitter to >=0.21
 tree-sitter-kotlin = "=0.3.5"
 tree-sitter-java = "0.20.2"
+tree-sitter-c = { git = "https://github.com/tree-sitter/tree-sitter-c.git"}
 # TODO: Update after: https://github.com/alex-pinkus/tree-sitter-swift/issues/278 resolves
 tree-sitter-swift = { git = "https://github.com/satyam1749/tree-sitter-swift.git", rev = "08a28993599f1968bc81631a89690503e1db7704" }
 tree-sitter-python = "0.20.2"
