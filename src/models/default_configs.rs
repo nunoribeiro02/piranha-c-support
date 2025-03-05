@@ -22,6 +22,7 @@ use super::{
 
 pub const JAVA: &str = "java";
 pub const JAVA_CS: &str = "java_cs";
+pub const C: &str = "c";
 pub const KOTLIN: &str = "kt";
 pub const KOTLIN_ALIAS: &str = "kotlin";
 pub const GO: &str = "go";

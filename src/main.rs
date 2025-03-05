@@ -15,7 +15,7 @@
 use std::{fs, process, time::Instant};
 
 use log::{debug, info};
-use polyglot_piranha::{
+use polyglot_piranha_c_support::{
   execute_piranha, models::piranha_arguments::PiranhaArguments,
   models::piranha_output::PiranhaOutputSummary,
 };

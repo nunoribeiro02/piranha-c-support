@@ -16,11 +16,11 @@ categories = [
 ]
 
 [[bin]]
-name = "polyglot_piranha"
+name = "polyglot_piranha_c_support"
 path = "src/main.rs"
 
 [lib]
-name = "polyglot_piranha"
+name = "polyglot_piranha_c_support"
 path = "src/lib.rs"
 crate-type = ["cdylib", "rlib"]
 doctest = false
@@ -62,7 +62,7 @@ tree-sitter-query = "0.1.0"
 tree-sitter-scala = "0.20.1"
 # newer versions of "tree-sitter-yaml" require that we bump "tree-sitter" version
 tree-sitter-yaml = "0.0.1"
-tree-sitter-c = { git = "https://github.com/nunoribeiro02/tree-sitter-c.git"}
+tree-sitter-c = "0.20"
 derive_builder = "0.12.0"
 getset = "0.1.2"
 pyo3 = "0.20.0"

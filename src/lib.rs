@@ -37,7 +37,7 @@ use pyo3::prelude::{pyfunction, pymodule, wrap_pyfunction, PyModule, PyResult, P
 use tempdir::TempDir;
 
 #[pymodule]
-fn polyglot_piranha(_py: Python<'_>, m: &PyModule) -> PyResult<()> {
+fn polyglot_piranha_c_support(_py: Python<'_>, m: &PyModule) -> PyResult<()> {
   pyo3_log::init();
   m.add_function(wrap_pyfunction!(execute_piranha, m)?)?;
   m.add_class::<PiranhaArguments>()?;

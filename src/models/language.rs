@@ -21,8 +21,8 @@ use crate::utilities::parse_toml;
 
 use super::{
   default_configs::{
-    default_language, GO, JAVA, JAVA_CS, KOTLIN, KOTLIN_ALIAS, PYTHON, RUBY, SCALA, STRINGS, SWIFT,
-    THRIFT, TSX, TS_SCHEME, TYPESCRIPT, YAML, YAML_ALIAS,
+    default_language, C, GO, JAVA, JAVA_CS, KOTLIN, KOTLIN_ALIAS, PYTHON, RUBY, SCALA, STRINGS,
+    SWIFT, THRIFT, TSX, TS_SCHEME, TYPESCRIPT, YAML, YAML_ALIAS,
   },
   outgoing_edges::Edges,
   rule::Rules,
@@ -58,6 +58,7 @@ pub struct PiranhaLanguage {
 pub enum SupportedLanguage {
   #[default]
   Java,
+  C,
   Kotlin,
   Go,
   Swift,
@@ -158,6 +159,15 @@ impl std::str::FromStr for PiranhaLanguage {
           comment_nodes: vec!["line_comment".to_string(), "block_comment".to_string()],
         })
       }
+      C => Ok(PiranhaLanguage {
+        extension: "c".to_string(),
+        supported_language: SupportedLanguage::C,
+        language: tree_sitter_c::language(),
+        rules: None,
+        edges: None,
+        scopes: vec![],
+        comment_nodes: vec![],
+      }),
       GO => {
         let rules: Rules = parse_toml(include_str!("../cleanup_rules/go/rules.toml"));
         let edges: Edges = parse_toml(include_str!("../cleanup_rules/go/edges.toml"));
